@@ -28,8 +28,8 @@ my_mvc_framework/
 ## Install
 ```
 python -m venv venv
-source venv/bin/activate  # untuk macOS/Linux
-venv\Scripts\activate  # untuk Windows
+source venv/bin/activate  # for macOS/Linux
+venv\Scripts\activate  # for Windows
 pip install -r requirements.txt
 python run.py
 ```
