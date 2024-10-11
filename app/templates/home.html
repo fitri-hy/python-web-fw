@@ -1,9 +1,12 @@
-# Py-Framework
+{% extends "layout.html" %}
 
-Py-Framework is a simple web framework using the Python language to make it easier for users to build websites
+{% block title %}Home | Python MVC Framework{% endblock %}
 
-```
-my_mvc_framework/
+{% block content %}
+<img class="h-24 w-24" src="{{ url_for('static', filename='img/logo.png') }}">
+<h1 class="mt-4 text-xl font-semibold">Welcome to the Home Page!</h1>
+<p>This is the content of the home page.</p>
+<pre class="bg-gray-100 dark:bg-gray-800 w-full max-w-sm mt-9 p-4 rounded overflow-x-auto"><code>py-framework/
 │
 ├── app/
 │   ├── controllers/
@@ -23,13 +26,13 @@ my_mvc_framework/
 │   └── app.py
 ├── requirements.txt
 └── run.py
-```
 
-## Install
-```
+
+# Instalation
+
 python -m venv venv
-source venv/bin/activate  # untuk macOS/Linux
-venv\Scripts\activate  # untuk Windows
+source venv/bin/activate  # for macOS/Linux
+venv\Scripts\activate  # for Windows
 pip install -r requirements.txt
-python run.py
-```
+python run.py</pre></code>
+{% endblock %}

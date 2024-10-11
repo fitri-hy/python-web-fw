@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Python MVC Framework{% endblock %}</title>
+	
+	<link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo.png') }}">
+	
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script type="module">
+		tailwind.config = {
+          darkMode: 'class',
+		}
+	</script>   
+</head>
+<body class="bg-neutral-100 dark:bg-neutral-800 text-gray-700 dark:text-gray-200">
+
+    {{ navbar|safe }}
+	<main class="min-h-screen flex flex-col justify-center items-center pt-24 pb-20 px-4">
+		<div class="bg-white dark:bg-neutral-900 shadow px-4 md:px-6 py-12 rounded w-full max-w-xl flex flex-col justify-center items-center">
+		{% block content %}{% endblock %}
+		</div>
+	</main>
+    {{ footer|safe }}
+	
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

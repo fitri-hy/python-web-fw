@@ -1,0 +1,7 @@
+.sidebar {
+	transition: transform 0.3s ease;
+	transform: translateX(100%); /* Mulai di luar layar */
+}
+.sidebar.show {
+	transform: translateX(0); /* Tampilkan di layar */
+}
